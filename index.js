@@ -9,7 +9,7 @@ const fresher = require("./fresher.json")
 const { application } = require('express')
 app.use(express.json())
 app.get('/', (req,res) => {
-    res.send("<h2>Hello World Use /se for Software Engineering jobs and /cloud for cloud jobs</h2>")
+    res.send("<h2>Search Software Engineering jobs and cloud for cloud jobs</h2>")
 })
 app.get('/se', function (req, res) {
   res.json(data)
