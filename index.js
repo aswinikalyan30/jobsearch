@@ -17,6 +17,7 @@ app.get('/se', function (req, res) {
 app.get('/cloud', function (req,res) {
     res.json(cloud)
 })
+//fetches cloud details
 app.post('/intern', (req,res)=>{
     
     if(!req.body.password){
@@ -31,4 +32,5 @@ app.post('/intern', (req,res)=>{
 app.get('/fresher', (req,res) => {
     res.json(fresher)
 })
+//fetches fresher details
 app.listen(3000)
