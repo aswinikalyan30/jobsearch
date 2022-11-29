@@ -21,6 +21,6 @@ jobs:
       run: |
         docker login -u $DOCKER_USER -p $DOCKER_PASSWORD
     - name: Build the Docker image
-      run: docker build . --file Dockerfile --tag shck18/jobsearch:$(date +%s)
+      run: docker build . --file Dockerfile --tag shck18/jobsearch
     - name: Docker push
-      run: docker push ${{secrets.Docker_USER}}/jobsearch
+      run: docker push shck18/jobsearch
