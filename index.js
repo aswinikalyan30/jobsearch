@@ -8,10 +8,7 @@ const fresher = require("./fresher.json")
 
 const { application } = require('express')
 app.use(express.json())
-app.use((req, res, next) => {
-    res.header('Access-Control-Allow-Origin', '*');
-    next();
-  });
+app.use(cors());
 app.get('/', (req,res) => {
     res.send("<h2>Search Software Engineering jobs and cloud for cloud jobs</h2>")
 })
