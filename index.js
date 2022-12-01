@@ -5,6 +5,7 @@ const data = require("./SE-indeed.json")
 const cloud = require("./data.json")
 const intern = require("./internship.json")
 const fresher = require("./fresher.json")
+const mixmatch = require("./mix.json")
 
 const { application } = require('express')
 app.use(express.json())
@@ -39,4 +40,7 @@ app.get('/fresher', (req,res) => {
     res.json(fresher)
 })
 //fetches fresher details
+app.get('/mix', (req,res) => {
+    res.json(mixmatch)
+})
 app.listen(3000)
