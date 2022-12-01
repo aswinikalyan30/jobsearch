@@ -18,10 +18,10 @@ app.use((req, res, next) => {
 app.get('/', (req,res) => {
     res.send("<h2>Search Software Engineering jobs and cloud for cloud jobs</h2>")
 })
-app.get('/se', function (req, res) {
+app.get('/ISE', function (req, res) {
   res.json(data)
 })
-app.get('/cloud', function (req,res) {
+app.get('/CSE', function (req,res) {
     res.json(cloud)
 })
 //fetches cloud details
@@ -36,11 +36,11 @@ app.post('/intern', (req,res)=>{
     }
     
 })
-app.get('/fresher', (req,res) => {
+app.get('/EEE', (req,res) => {
     res.json(fresher)
 })
 //fetches fresher details
-app.get('/mix', (req,res) => {
+app.get('/MEC', (req,res) => {
     res.json(mixmatch)
 })
 app.listen(3000)
