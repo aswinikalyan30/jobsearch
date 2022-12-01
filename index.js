@@ -4,7 +4,8 @@ const app = express()
 const data = require("./SE-indeed.json")
 const cloud = require("./dev.json")
 const intern = require("./internship.json")
-const fresher = require("./fresher.json")
+const fresher = require("./electrical.json")
+const part = require("./fresher.json")
 const mixmatch = require("./mix.json")
 
 const { application } = require('express')
@@ -23,6 +24,9 @@ app.get('/ISE', function (req, res) {
 })
 app.get('/CSE', function (req,res) {
     res.json(cloud)
+})
+app.get('/PT',function (req, res) {
+    res.json(part)
 })
 //fetches cloud details
 app.post('/intern', (req,res)=>{
