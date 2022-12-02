@@ -32,7 +32,7 @@ const filterJSON = (json) => {
             .filter((value) => Object.keys(lis).includes(value))}`
         ] ;
     });
-    console.log(json); 
+    return json;
   }
 };
 module.exports =  filterJSON;
