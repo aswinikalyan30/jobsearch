@@ -5,8 +5,17 @@ const CC = countryList().getValues();
 const lis = {
   Software: ["java", "python", "c++"],
   Machine: ["python"],
+  Research : ["python","statistcs"],
   Full: ["nodejs", "reactjs"],
-  Developer: ["javascript","mysql"]
+  Developer: ["javascript","mysql"],
+  Cloud: ["unix","python","aws"],
+  Support: ["communications"],
+  Architect: ["aws","gcp","cloud"],
+  Network: ["os","networking"],
+  Backend: ["mongodb","nodejs","mysql"],
+  Electrical: ["c++","cad","pscad"],
+  Signal: ["matlab","vlsi","c","c++"],
+  Design: ["cad"]
 };
 
 const filterJSON = (json) => {
@@ -21,9 +30,9 @@ const filterJSON = (json) => {
           `${country["Title"]
             .split(" ")
             .filter((value) => Object.keys(lis).includes(value))}`
-        ];
+        ] ;
     });
-    return json;
+    console.log(json); 
   }
 };
 module.exports =  filterJSON;

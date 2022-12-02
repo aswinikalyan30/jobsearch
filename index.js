@@ -1,11 +1,7 @@
 const express = require('express')
 const app = express()
-
-const data = require("./SE-indeed.json")
-const cloud = require("./dev.json")
-const intern = require("./internship.json")
-const fresher = require("./electrical.json")
-const part = require("./fresher.json")
+const cloud = require("./cloud.json")
+const electrical = require("./electrical.json")
 const mixmatch = require("./mix.json")
 const filterJSON = require("./filter");
 const final = require("./final.json")
@@ -22,32 +18,21 @@ app.get('/', (req,res) => {
     res.send("<h2>Search Software Engineering jobs and cloud for cloud jobs</h2>")
 })
 app.get('/ISE', function (req, res) {
-
-  res.json(filterJSON(final))
+  res.json(filterJSON(cloud))
 })
 app.get('/CSE', function (req,res) {
-    res.json(filterJSON(final))
+    res.json(filterJSON(mixmatch))
 })
 app.get('/PT',function (req, res) {
     res.json(filterJSON(final))
 })
-//fetches cloud details
-app.post('/intern', (req,res)=>{
-    
-    if(!req.body.password){
-        return res.json({data:"fail"})
-    }
-    if(req.body.password==="123"){
-        
-        return res.json(intern)
-    }
-    
-})
+
+
 app.get('/EEE', (req,res) => {
-    res.json(final)
+    res.json(filterJSON(electrical))
 })
 //fetches fresher details
 app.get('/MEC', (req,res) => {
-    res.json(final)
+    res.json(filterJSON(final))
 })
 app.listen(3000)
