@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
+    "node-fetch": "^2.6.7",
     "react-select-country-list": "^2.2.3",
     "usa-states": "^0.0.6"
   },
