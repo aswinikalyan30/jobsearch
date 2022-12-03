@@ -10,7 +10,8 @@
   "license": "ISC",
   "dependencies": {
     "express": "^4.18.2",
-    "react-select-country-list": "^2.2.3"
+    "react-select-country-list": "^2.2.3",
+    "usa-states": "^0.0.6"
   },
   "devDependencies": {
     "nodemon": "^2.0.20"

@@ -1,7 +1,11 @@
-const countryList = require("react-select-country-list");
+// const countryList = require("react-select-country-list");
+var UsaStates = require('usa-states').UsaStates;
+var usStates = new UsaStates();
+var CC = usStates.arrayOf('abbreviations');
+
 // THIS IS FILTERING BASED ON THE COUNTRY CODES
 let cy = [];
-const CC = countryList().getValues();
+// const CC = countryList().getValues();
 const lis = {
   Software: ["java", "python", "c++"],
   Machine: ["python"],
