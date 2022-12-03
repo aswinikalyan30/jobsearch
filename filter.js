@@ -15,7 +15,10 @@ const lis = {
   Backend: ["mongodb","nodejs","mysql"],
   Electrical: ["c++","cad","pscad"],
   Signal: ["matlab","vlsi","c","c++"],
-  Design: ["cad"]
+  Design: ["cad"],
+  Mechanical: ["autocad"],
+  Apprentice: ["cad","vlsi"],
+  Lecturer: ["teaching"]
 };
 
 const filterJSON = (json) => {

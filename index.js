@@ -5,6 +5,7 @@ const electrical = require("./electrical.json")
 const mixmatch = require("./mix.json")
 const filterJSON = require("./filter");
 const final = require("./final.json")
+const mechanic = require("./mechanic.json")
 
 const { application } = require('express')
 app.use(express.json())
@@ -33,6 +34,6 @@ app.get('/EEE', (req,res) => {
 })
 //fetches fresher details
 app.get('/MEC', (req,res) => {
-    res.json(filterJSON(final))
+    res.json(filterJSON(mechanic))
 })
 app.listen(3000)
