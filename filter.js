@@ -61,7 +61,7 @@ const filterJSON = (json) => {
 }
 const filterJSON1 = async (json) => {
     {
-        const location1 = await a("5166 State Street, New York, 19063")
+        const location1 = [ 39.9178244, -75.3979711 ] 
         //for await(const country of json ){
         const response = await Promise.all(
             json.map(async (country) => {
